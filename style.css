@@ -91,30 +91,52 @@ body {
     z-index: 500;
 }
 
+.btn {
+    border: 1px solid violet;
+}
+
 .cot {
+    bottom: -525%;
     position: absolute;
-    width: 300px;
+    width: 180px;
     height: 250px;
     background-color: skyblue;
-    bottom: 60px;
     display: none;
     z-index: 500;
+    right: 0;
+    transition: all 0.3s;
 }
 
 .cot2 {
+    bottom: -525%;
     position: absolute;
-    width: 300px;
+    width: 180px;
     height: 250px;
     background-color: pink;
-    bottom: 60px;
     display: none;
     z-index: 600;
+    right: 0;
+    transition: all 0.3s;
 }
 
 .box:hover .cot {
     display: block;
+    transform: translateY();
+    transition: all 0.2s;
 }
 
 .box2:hover .cot2 {
     display: block;
+    transform: translateY();
+    transition: all 0.2s;
+}
+
+.first {
+    width: 26.5px;
+    transition: all 0.2s;
+}
+
+.first:hover {
+    transition: all 0.2s;
+    transform: scale(1.5);
 }
