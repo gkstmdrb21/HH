@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .header {
@@ -79,11 +81,40 @@ body {
 }
 
 .footer {
-
+    display: flex;
+    justify-content: flex-end;
     position: relative;
     background-color: green;
     width: 100%;
     height: 5%;
     bottom: 0;
     z-index: 500;
+}
+
+.cot {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    background-color: skyblue;
+    bottom: 60px;
+    display: none;
+    z-index: 500;
+}
+
+.cot2 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    background-color: pink;
+    bottom: 60px;
+    display: none;
+    z-index: 600;
+}
+
+.box:hover .cot {
+    display: block;
+}
+
+.box2:hover .cot2 {
+    display: block;
 }
