@@ -91,16 +91,16 @@ body {
     z-index: 500;
 }
 
-.btn_1 {
+.btn1 {
     border: 1px solid violet;
 }
 
-.btn_2 {
+.btn2 {
     border: 1px solid violet;
 }
 
 .cot {
-    bottom: -525%;
+    bottom: -10px;
     position: absolute;
     width: 180px;
     height: 250px;
@@ -108,10 +108,11 @@ body {
     display: none;
     z-index: 500;
     right: 0;
+    transition: all 0.2s;
 }
 
 .cot2 {
-    bottom: -525%;
+    bottom: -10px;
     position: absolute;
     width: 180px;
     height: 250px;
@@ -119,12 +120,21 @@ body {
     display: none;
     z-index: 600;
     right: 0;
+    transition: all 0.2s;
 }
 
 .btn1:hover ~ .cot{
-    transform:translateY(50px);
-    transition: all 0.2s;
     display: block;
+    transform:translateY(100px);
+    transition: all 0.2s;
+    z-index: 800;
+}
+
+.btn2:hover ~ .cot2{
+    display: block;
+    transform:translateY(100px);
+    transition: all 0.2s;
+    z-index: 800;
 }
 
 .first {
