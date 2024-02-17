@@ -1,7 +1,12 @@
+html {
+    z-index: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    z-index: 0;
 }
 
 .header {
@@ -100,41 +105,39 @@ body {
 }
 
 .cot {
-    bottom: -10px;
-    position: absolute;
     width: 180px;
     height: 250px;
-    background-color: skyblue;
-    display: none;
-    z-index: 500;
+    bottom: -300px;
+    position: fixed;
+    z-index: -500;
     right: 0;
-    transition: all 0.2s;
+    visibility: hidden;
 }
 
 .cot2 {
-    bottom: -10px;
-    position: absolute;
     width: 180px;
     height: 250px;
+    right: -300px;
+    position: fixed;
+    z-index: -500;
+    bottom: -300px;
+    visibility: hidden;
+}
+
+.btn1:hover~.cot {
+    transform: translateY(-400px);
+    transition: all 0.2s;
+    z-index: 800;
     background-color: pink;
-    display: none;
-    z-index: 600;
-    right: 0;
-    transition: all 0.2s;
+    visibility: visible;
 }
 
-.btn1:hover ~ .cot{
-    display: block;
-    transform:translateY(100px);
+.btn2:hover~.cot2 {
+    transform: translateY(-400px);
     transition: all 0.2s;
     z-index: 800;
-}
-
-.btn2:hover ~ .cot2{
-    display: block;
-    transform:translateY(100px);
-    transition: all 0.2s;
-    z-index: 800;
+    background-color: black;
+    visibility: visible;
 }
 
 .first {
