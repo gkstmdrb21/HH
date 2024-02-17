@@ -1,13 +1,15 @@
 <html>
+
 <head>
     <style>
-        .btn{
+        .btn {
             position: absolute;
             width: 100px;
             height: 30px;
             background-color: blue;
         }
-        .movement{
+
+        .movement {
             top: 200px;
             position: absolute;
             width: 100px;
@@ -16,15 +18,18 @@
             transition: all 0.3s;
 
         }
-        .btn:hover ~ .movement{
+
+        .btn:hover~.movement {
             background-color: pink;
             transition: all 0.3s;
-            transform: translateY(90px);
+            transform: translateY(-90px);
         }
     </style>
 </head>
+
 <body>
-    <div class = "btn"></div>
-    <div class = "movement"></div>
+    <div class="btn"></div>
+    <div class="movement"></div>
 </body>
+
 </html>
